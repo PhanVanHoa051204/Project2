@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Phan_Văn_Hòa_CNTT2.Models.QUAN_TRI_VIEN>
+
+@{
+    ViewBag.Title = "Index";
+}
+<head>
+    <link rel="stylesheet" type="text/css" href="~/Content/Style.css">
+</head>
+<h2 class="QTV3">Thông Tin Đăng Nhập</h2>
+
+<p class="QTV3">
+    @Html.ActionLink("Đăng Nhập", "Create")
+</p>
+<table class="table1">
+    <tr>
+        <th>
+             Tên Đăng Nhập
+        </th>
+        <th>
+            Mật Khẩu
+        </th>
+        <th>
+            Vai Trò
+        </th>
+        <th><p>Chức Năng</p></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td class="QTV2">
+            @Html.DisplayFor(modelItem => item.TEN_DANG_NHAP)
+        </td>
+        <td class="QTV2">
+            @Html.DisplayFor(modelItem => item.MAT_KHAU)
+        </td>
+        <td class="QTV2">
+            @Html.DisplayFor(modelItem => item.VAI_TRO)
+        </td>
+        <td class="QTV1">
+            @Html.ActionLink("Xem", "Details", new { id = item.MA_QUAN_TRI } ,new { @class= "btn-custom btn-view" }) |
+            @Html.ActionLink("Sửa", "Edit", new { id = item.MA_QUAN_TRI } ,new { @class = "btn-custom btn-edit" }) |
+            @Html.ActionLink("Xóa", "Delete", new { id = item.MA_QUAN_TRI } ,new { @class = "btn-custom btn-delete" })
+        </td>
+    </tr>
+    }
+</table>

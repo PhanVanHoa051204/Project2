@@ -1,0 +1,63 @@
+﻿@model Phan_Văn_Hòa_CNTT2.Models.SAN_PHAM
+
+@{
+    ViewBag.Title = "Create";
+}
+<head>
+    <link rel="stylesheet" type="text/css" href="~/Content/Style.css">
+</head>
+@*<h2>Thêm Sản Phẩm</h2>*@
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="QTV4">
+        <h4>Thêm Sản Phẩm</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        <p class="control-label1">Tên Sản Phẩm</p>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.TEN_SAN_PHAM, new { htmlAttributes = new { @class = "form-control1" } })
+            @Html.ValidationMessageFor(model => model.TEN_SAN_PHAM, "", new { @class = "text-danger1" })
+        </div>
+    </div>
+            
+    <div class="form-group">
+        <p class="control-label1">Mô Tả</p>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.MO_TA, new { htmlAttributes = new { @class = "form-control1" } })
+            @Html.ValidationMessageFor(model => model.MO_TA, "", new { @class = "text-danger1" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <p class="control-label1">Giá</p>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.GIA, new { htmlAttributes = new { @class = "form-control1" } })
+            @Html.ValidationMessageFor(model => model.GIA, "", new { @class = "text-danger1" })
+        </div>
+    </div>
+
+        @*<div class="form-group">
+            @Html.LabelFor(model => model.NGAY_TAO, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NGAY_TAO, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.NGAY_TAO, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+
+                <input type="submit" value="Thêm" class="btn btn-default" />
+                @Html.ActionLink("Quay Lại", "Index", "Home", new { @class = "btn btn-success" })
+            </div>
+        </div>
+    </div>
+}
+
+@*<div>
+    @Html.ActionLink("Quay Lại", "Index", "Home", new { @class = "btn btn-success" })
+</div>*@

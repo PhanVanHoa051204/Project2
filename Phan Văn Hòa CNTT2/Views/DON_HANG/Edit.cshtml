@@ -1,0 +1,64 @@
+﻿@model Phan_Văn_Hòa_CNTT2.Models.DON_HANG
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2></h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="QTV4">
+        <h4>Thông Tin Đơn Hàng</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <p class="control-label1">Tên Khách Hàng</p>
+            <div class="col-md-10">
+                @Html.DropDownList("MA_KHACH_HANG", null, htmlAttributes: new { @class = "form-control1" })
+                @Html.ValidationMessageFor(model => model.MA_KHACH_HANG, "", new { @class = "text-danger1" })
+            </div>
+        </div>
+
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.NGAY_DAT_HANG, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.NGAY_DAT_HANG, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.NGAY_DAT_HANG, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.NGAY_GIAO_HANG, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.NGAY_GIAO_HANG, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.NGAY_GIAO_HANG, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+
+        <div class="form-group">
+            <p class="control-label1">Trạng Thái</p>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TRANG_THAI, new { htmlAttributes = new { @class = "form-control1" } })
+                @Html.ValidationMessageFor(model => model.TRANG_THAI, "", new { @class = "text-danger1" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <p class="control-label1">Tổng Tiền</p>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TONG_TIEN, new { htmlAttributes = new { @class = "form-control1" } })
+                @Html.ValidationMessageFor(model => model.TONG_TIEN, "", new { @class = "text-danger1" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Sửa" class="btn btn-default" />
+                @Html.ActionLink("Quay Lại", "Index", "Home", new { @class = "btn btn-success" })
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,42 @@
+﻿@model Phan_Văn_Hòa_CNTT2.Models.KICH_THUOC
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>KICH_THUOC</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KICH_THUOC1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KICH_THUOC1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HE_SO_GIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HE_SO_GIA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SAN_PHAM.TEN_SAN_PHAM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SAN_PHAM.TEN_SAN_PHAM)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MA_KICH_THUOC }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

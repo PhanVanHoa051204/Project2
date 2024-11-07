@@ -1,0 +1,42 @@
+﻿@model Phan_Văn_Hòa_CNTT2.Models.TOPPING_TRONG_DON_HANG
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TOPPING_TRONG_DON_HANG</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SO_LUONG_TOPPING)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SO_LUONG_TOPPING)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CHI_TIET_DON_HANG.MA_CHI_TIET_DON_HANG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CHI_TIET_DON_HANG.MA_CHI_TIET_DON_HANG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TOPPING.TEN_TOPPING)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TOPPING.TEN_TOPPING)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MA_TOPPING_DON_HANG }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

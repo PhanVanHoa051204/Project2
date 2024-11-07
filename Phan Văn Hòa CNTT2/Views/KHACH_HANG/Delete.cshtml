@@ -1,0 +1,66 @@
+﻿@model Phan_Văn_Hòa_CNTT2.Models.KHACH_HANG
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2></h2>
+
+
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="QTV4">
+        <h3>Bạn có muốn xóa khách hàng này không ?</h3>
+        <dt>
+            <p class="control-label1">Tên Khách Hàng</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TEN_KHACH_HANG)
+        </dd>
+
+        <dt>
+            <p class="control-label1">Email</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMAIL)
+        </dd>
+
+        <dt>
+            <p class="control-label1">Số Điện Thoại</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SO_DIEN_THOAI)
+        </dd>
+
+        <dt>
+            <p class="control-label1">Địa Chỉ</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIA_CHI)
+        </dd>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Có" class="btn btn-default" /> |
+                @Html.ActionLink("Không", "Index", "Home", new { @class = "btn btn-success" })
+            </div>
+        }
+        @*<dt>
+            @Html.DisplayNameFor(model => model.NGAY_TAO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NGAY_TAO)
+        </dd>*@
+
+    </dl>
+
+    
+</div>

@@ -1,0 +1,48 @@
+﻿@model Phan_Văn_Hòa_CNTT2.Models.QUAN_TRI_VIEN
+
+@{
+    ViewBag.Title = "Details";
+}
+
+@*<h2 class="QTV4">Xem Thông Tin</h2>*@
+
+<div>
+   
+    <h4 class=""></h4>
+    <hr />
+    <dl class="QTV4">
+        <h2>Thông tin </h2>
+        <dt>
+            <p class="control-label1">Tên Đăng Nhập</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TEN_DANG_NHAP)
+        </dd>
+
+        <dt>
+            <p class="control-label1">Mật Khẩu</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MAT_KHAU)
+        </dd>
+
+        <dt>
+            <p class="control-label1">Vai Trò</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VAI_TRO)
+        </dd>
+        <p>
+            @*@Html.ActionLink("Edit", "Edit", new { id = Model.MA_QUAN_TRI }) |*@
+            @Html.ActionLink("Quay Lại", "Index", "Home", new { @class = "btn btn-success" })
+        </p>
+
+    </dl>
+</div>
+<!--<p>-->
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.MA_QUAN_TRI }) |*@
+    
+<!--</p>-->

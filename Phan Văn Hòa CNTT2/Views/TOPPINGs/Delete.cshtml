@@ -1,0 +1,40 @@
+﻿@model Phan_Văn_Hòa_CNTT2.Models.TOPPING
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div>
+
+    <hr />
+    <dl class="QTV4">
+        <h4>Bạn có muốn xóa topping này không ?</h4>
+        <dt>
+            <p class="control-label1">Tên Topping</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TEN_TOPPING)
+        </dd>
+
+        <dt>
+            <p class="control-label1">Giá Topping</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GIA_TOPPING)
+        </dd>
+        <p>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                <div class="form-actions no-color">
+                    <input type="submit" value="Xóa" class="btn btn-success" /> |
+                    @Html.ActionLink("Quay lại", "Index", "Home", new { @class = "btn btn-success" })
+                </div>
+            }
+        </p>
+
+    </dl>
+</div>
+

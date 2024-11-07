@@ -1,0 +1,54 @@
+﻿@model Phan_Văn_Hòa_CNTT2.Models.SAN_PHAM
+
+@{
+    ViewBag.Title = "Details";
+}
+
+@*<h2>Details</h2>*@
+
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="QTV4">
+        <h2>Xem Sản Phẩm</h2>
+        <dt>
+            <p class="control-label1">Tên Sản Phẩm</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TEN_SAN_PHAM)
+        </dd>
+
+        <dt>
+            <p class="control-label1">Mô Tả</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MO_TA)
+        </dd>
+
+        <dt>
+            <p class="control-label1">Giá</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GIA)
+        </dd>
+        <p>
+            @*@Html.ActionLink("Edit", "Edit", new { id = Model.MA_SAN_PHAM }) |*@
+            @Html.ActionLink("Quay Lại", "Index","Home", new { @class = "btn btn-success" })
+        </p>
+        @* <dt>
+            @Html.DisplayNameFor(model => model.NGAY_TAO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NGAY_TAO)
+        </dd>*@
+
+    </dl>
+</div>
+@*<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MA_SAN_PHAM }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>*@

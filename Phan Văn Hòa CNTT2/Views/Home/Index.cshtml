@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "";
+}
+<link rel="stylesheet" type="text/css" href="~/Content/Style.css">
+<main>
+    <section class="row" aria-labelledby="aspnetTitle">
+        <h1 id="title"></h1>
+        <p class="lead">
+            <h2 class="pz1">
+                Chào mừng bạn đến với Pizza Premium
+            </h2>   
+        </p>
+        @* <p><a href="https://localhost:44377/SAN_PHAM" class="btn btn-primary btn-md">Xem sản phẩm &raquo;</a></p>*@
+        <div class="body-content1">
+            <div class="slides">
+                <img src="~/Images/anh1.jpg" alt="" class="centered-image1">
+                <img src="~/Images/anh2.jpg" alt="" class="centered-image1">              
+                <img src="~/Images/anh4.jpg" alt="" class="centered-image1">
+                <img src="~/Images/anh5.jpg" alt="" class="centered-image1">
+            </div>
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+        <link rel="stylesheet" type="text/css" href="~/Content/Style.css">
+    </section>
+
+    <div class="row">
+        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
+            <h2 id="gettingStartedTitle"></h2>
+            <p>
+            </p>
+            <p><a class="btn btn-outline-dark" href="https://localhost:44377/QUAN_TRI_VIEN">Đăng Nhập &raquo;</a></p>
+        </section>
+        <section class="col-md-4" aria-labelledby="librariesTitle">
+            <h2 id="librariesTitle"></h2>
+            <p></p>
+            <p><a class="btn btn-outline-dark" href="https://localhost:44377/SAN_PHAM">Xem sản phẩm &raquo;</a></p>
+        </section>
+        <section class="col-md-4" aria-labelledby="hostingTitle">
+            <h2 id="hostingTitle"></h2>
+            <p></p>
+            <p><a class="btn btn-outline-dark" href="https://localhost:44377/TOPPING_TRONG_DON_HANG">Thêm topping</a></p>
+        </section>
+    </div>
+</main>
+<script>
+    let slideIndex = 0;
+    function showSlide(index) {
+        const slides = document.querySelector('.slides');
+        slideIndex = (index + slides.children.length) % slides.children.length;
+        slides.style.transition = 'transform 0.5s ease-in-out';
+        slides.style.transform = `translateX(${-slideIndex * 100}%)`;
+    } function nextSlide() {
+        showSlide(slideIndex + 1);
+    } function prevSlide() {
+        showSlide(slideIndex - 1);
+}</script>

@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Phan_Văn_Hòa_CNTT2.Models.DON_HANG>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="QTV3">Thông Tin Đơn Hàng</h2>
+
+<p class="QTV3">
+    @Html.ActionLink("Thêm Đơn Hàng", "Create")
+</p>
+<table class="table1">
+    <tr>
+        <th>
+            <p>Tên Khách Hàng</p>
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.NGAY_DAT_HANG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NGAY_GIAO_HANG)
+        </th>*@
+        <th>
+            <p>Trạng Thái</p>
+        </th>
+        <th>
+            <p>Tổng Tiền</p>
+        </th>
+
+        <th><p>Chức Năng</p></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td class="QTV2">
+            @Html.DisplayFor(modelItem => item.KHACH_HANG.TEN_KHACH_HANG)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.NGAY_DAT_HANG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NGAY_GIAO_HANG)
+        </td>*@
+        <td class="QTV2">
+            @Html.DisplayFor(modelItem => item.TRANG_THAI)
+        </td>
+        <td class="QTV2">
+            @Html.DisplayFor(modelItem => item.TONG_TIEN)
+        </td>
+
+
+        <td>
+            @Html.ActionLink("Xem", "Details", new { id = item.MA_DON_HANG }, new { @class = "btn-custom btn-view" }) |
+            @Html.ActionLink("Sửa", "Edit", new { id = item.MA_DON_HANG }, new { @class = "btn-custom btn-edit" }) |
+            @Html.ActionLink("Xóa", "Delete", new { id = item.MA_DON_HANG }, new { @class = "btn-custom btn-delete" })
+        </td>
+    </tr>
+}
+
+</table>

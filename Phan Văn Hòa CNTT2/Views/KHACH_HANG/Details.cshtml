@@ -1,0 +1,63 @@
+﻿@model Phan_Văn_Hòa_CNTT2.Models.KHACH_HANG
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2></h2>
+
+<div>
+    
+    <hr />
+    <dl class="QTV4">
+        <h4>Thông Tin Khách Hàng</h4>
+        <dt>
+            <p class="control-label1">Tên Khách Hàng</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TEN_KHACH_HANG)
+        </dd>
+
+        <dt>
+            <p class="control-label1">Email</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMAIL)
+        </dd>
+
+        <dt>
+            <p class="control-label1">Số Điện Thoại</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SO_DIEN_THOAI)
+        </dd>
+
+        <dt>
+            <p class="control-label1">Địa Chỉ</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIA_CHI)
+        </dd>
+        <p>
+            @* @Html.ActionLink("Edit", "Edit", new { id = Model.MA_KHACH_HANG }) |*@
+            @Html.ActionLink("Quay Lại", "Index", "Home", new { @class = "btn btn-success" })
+        </p>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.NGAY_TAO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NGAY_TAO)
+        </dd>*@
+
+    </dl>
+</div>
+@*<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MA_KHACH_HANG }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>*@

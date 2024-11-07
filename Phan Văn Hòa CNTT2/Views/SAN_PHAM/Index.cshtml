@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Phan_Văn_Hòa_CNTT2.Models.SAN_PHAM>
+
+@{
+    ViewBag.Title = "Index";
+}
+<head>
+    <link rel="stylesheet" type="text/css" href="~/Content/Style.css">
+</head>
+<h2 class="SP1">Danh Sách Sản phẩm</h2>
+
+<p class="QTV3">
+    @Html.ActionLink("Thêm sản phẩm", "Create")
+</p>
+<table class="Table2">
+    <tr>
+        <th>
+            <p >Tên sản phẩm</p>
+        </th>
+        <th>
+            <p >Mô Tả</p>
+        </th>
+        <th>
+            <p >Giá</p>
+        </th>
+        @*<th>
+           <p>Ngày Tạo</p>
+        </th>*@
+        <th><p>Chức Năng</p></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td class="SP2">   
+            @Html.DisplayFor(modelItem => item.TEN_SAN_PHAM)
+        </td>
+        <td class="SP2">
+            @Html.DisplayFor(modelItem => item.MO_TA)
+        </td>
+        <td class="SP2">
+            @Html.DisplayFor(modelItem => item.GIA)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.NGAY_TAO)
+        </td>*@
+        <td class="SP3">
+            @Html.ActionLink("Xem", "Details", new { id = item.MA_SAN_PHAM }, new { @class = "btn-custom btn-view" }) |
+            @Html.ActionLink("Sửa", "Edit", new { id = item.MA_SAN_PHAM }, new { @class = "btn-custom btn-edit" }) |
+            @Html.ActionLink("Xóa", "Delete", new { id = item.MA_SAN_PHAM }, new { @class = "btn-custom btn-delete" })
+        </td>
+    </tr>
+}
+
+</table>

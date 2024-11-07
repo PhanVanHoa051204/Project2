@@ -1,0 +1,58 @@
+﻿@model Phan_Văn_Hòa_CNTT2.Models.CHI_TIET_DON_HANG
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2></h2>
+
+<div>
+
+    <hr />
+    <dl class="QTV4">
+        <h4>Bạn có muốn xóa đơn hàng này không ?</h4>
+        <dt>
+            <p class="control-label1">Tên Sản Phẩm</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SAN_PHAM.TEN_SAN_PHAM)
+        </dd>
+        <dt>
+            <p class="control-label1">Số Lượng</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SO_LUONG)
+        </dd>
+        <dt>
+            <p class="control-label1">Kích Thước</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KICH_THUOC.KICH_THUOC1)
+        </dd>
+        <dt>
+            <p class="control-label1">Trạng Thái</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DON_HANG.TRANG_THAI)
+        </dd>
+
+        <dt>
+            <p class="control-label1">Thành Tiền</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.THANH_TIEN)
+        </dd>
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Quay Lại", "Index", "Home", new { @class = "btn btn-success" })
+        </div>
+
+    </dl>
+        
+ </div>
+

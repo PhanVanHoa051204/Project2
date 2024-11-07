@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="52aa4ced75944ecfa49228c4660a084a" Name="Diagram1">
+        <EntityTypeShape EntityType="PhanVanHoa_K22CNTT2Model.CHI_TIET_DON_HANG" Width="1.5" PointX="5.25" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhanVanHoa_K22CNTT2Model.DON_HANG" Width="1.5" PointX="3" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhanVanHoa_K22CNTT2Model.KHACH_HANG" Width="1.5" PointX="0.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhanVanHoa_K22CNTT2Model.KICH_THUOC" Width="1.5" PointX="3" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhanVanHoa_K22CNTT2Model.QUAN_TRI_VIEN" Width="1.5" PointX="7.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhanVanHoa_K22CNTT2Model.SAN_PHAM" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhanVanHoa_K22CNTT2Model.sysdiagram" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhanVanHoa_K22CNTT2Model.TOPPING" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhanVanHoa_K22CNTT2Model.TOPPING_TRONG_DON_HANG" Width="1.5" PointX="7.5" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="PhanVanHoa_K22CNTT2Model.FK__CHI_TIET___MA_DO__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="PhanVanHoa_K22CNTT2Model.FK__CHI_TIET___MA_KI__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="PhanVanHoa_K22CNTT2Model.FK__CHI_TIET___MA_SA__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="PhanVanHoa_K22CNTT2Model.FK__TOPPING_T__MA_CH__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="PhanVanHoa_K22CNTT2Model.FK__DON_HANG__MA_KHA__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="PhanVanHoa_K22CNTT2Model.FK__KICH_THUO__MA_SA__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="PhanVanHoa_K22CNTT2Model.FK__TOPPING_T__MA_TO__59FA5E80" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

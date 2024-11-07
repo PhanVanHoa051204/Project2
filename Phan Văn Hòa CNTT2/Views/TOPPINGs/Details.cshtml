@@ -1,0 +1,36 @@
+﻿@model Phan_Văn_Hòa_CNTT2.Models.TOPPING
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+
+<div>
+    
+    <hr />
+    <dl class="QTV4">
+        <h4>TOPPING</h4>
+        <dt>
+            <p class="control-label1">Tên Topping</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TEN_TOPPING)
+        </dd>
+
+        <dt>
+            <p class="control-label1">Giá Topping</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GIA_TOPPING)
+        </dd>
+        <p>
+            @*@Html.ActionLink("Edit", "Edit", new { id = Model.MA_TOPPING }) |*@
+            @Html.ActionLink("Quay Lại", "Index", "Home", new { @class = "btn btn-success" })
+        </p>
+
+    </dl>
+</div>
+

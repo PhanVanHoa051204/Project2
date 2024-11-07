@@ -1,0 +1,56 @@
+﻿@model Phan_Văn_Hòa_CNTT2.Models.QUAN_TRI_VIEN
+
+@{
+    ViewBag.Title = "Delete";
+}
+<head>
+    <link rel="stylesheet" type="text/css" href="~/Content/Style.css">
+</head>
+<h2></h2>
+
+@*<h3 class="QTV4">Bạn có muốn xóa không ?</h3>*@
+<div>
+    
+    <hr />
+    <dl class="QTV4">
+        <h3 class="">Bạn có muốn xóa không ?</h3>
+        <dt>
+            <p class="control-label1">Tên Đăng Nhập</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TEN_DANG_NHAP)
+        </dd>
+
+        <dt>
+            <p class="control-label1">Mật Khẩu</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MAT_KHAU)
+        </dd>
+
+        <dt>
+            <p class="control-label1">Vai Trò</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VAI_TRO)
+        </dd>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="form-actions no-color">
+                <input type="submit" value="Xóa" class="btn btn-success" /> |
+                @Html.ActionLink("Quay lại", "Index", "Home", new { @class = "btn btn-success" })
+            </div>
+        }
+        </dl>
+
+@*<div class="form-actions no-color">
+    <input type="submit" value="Xóa" class="btn btn-success" /> |
+    @Html.ActionLink("Quay lại", "Index", "Home", new { @class = "btn btn-success" })
+</div>*@
+    }
+</div>

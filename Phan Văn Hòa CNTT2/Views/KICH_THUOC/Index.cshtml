@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Phan_Văn_Hòa_CNTT2.Models.KICH_THUOC>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.KICH_THUOC1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HE_SO_GIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SAN_PHAM.TEN_SAN_PHAM)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.KICH_THUOC1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HE_SO_GIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SAN_PHAM.TEN_SAN_PHAM)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MA_KICH_THUOC }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MA_KICH_THUOC }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MA_KICH_THUOC })
+        </td>
+    </tr>
+}
+
+</table>
